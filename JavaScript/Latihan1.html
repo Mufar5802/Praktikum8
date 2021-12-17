@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Luas Lingkaran dan Keliling Lingkaran</title>
+    </head>
+<body>
+    <script>
+    function luaslingkaran(){
+        let jari2 = parseFloat(document.inputdata.nilai_jari2.value);
+        if(isNaN(jari2)) {
+            jari2=0.0;
+        }
+        let hasil = 22/7*jari2*jari2;
+        alert("Jadi, luas lingkaran adalah : "+ hasil); 
+    }
+
+    function kelilinglingkaran() {
+        let jari2 = parseFloat(document.inputdata.nilai_jari2.value);
+        if(isNaN(jari2)) {
+            jari2=0.0;
+        }
+        let hasil = 2*22/7*jari2;
+        alert("Jadi, keliling lingkaran adalah :"+ hasil);
+    }
+</script>
+    <form name="inputdata">
+        <h3>
+            Nilai Jari-jari = <input type="text" name="nilai_jari2" />
+        </h3>
+        <input type="button" value="Hitung Luas" onclick="luaslingkaran()" />
+        <input type="button" value="Hitung Keliling" onclick="kelilinglingkaran()" />
+        <input type="reset" value="reset" />
+    </form>
+</body>
+</html>
